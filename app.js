@@ -1,19 +1,25 @@
-console.log("Link test complete")
+console.log("Index linked")
 
-let gameData = {
-    catCount: 0,
-    perSecond: 0,
-}
-console.log("Let values added")
+// let gameData = {
+//     catCount: 0,
+//     perSecond: 0,
+// }
+// console.log("Let values added")
 
-async function GetProducts() {
+const plusOneButton = document.getElementById("plusOneButton")
+const resetButton = document.getElementById("resetButton")
+const currentTotal = document.getElementById("currentTotal")
+const perSecond = document.getElementById("perSecond")
+const shopContainer = document.getElementById("shopContainer")
+console.log("DOM linked")
+
+async function getUpgrades() {
     const response = await fetch("https://cookie-upgrade-api.vercel.app/api/upgrades");
     console.log("HTTP Response", response);
-    const json = await response.json();
-    console.log("JSON Data", json);
+    const data = await response.json();
+    console.log("JSON Data", data);
+    const shopUpgradesArray = [];
+    return shopUpgradesArray;
 }
 
-GetProducts()
-
-
-// shopUpgradesArray.push(...data);
+getUpgrades()
